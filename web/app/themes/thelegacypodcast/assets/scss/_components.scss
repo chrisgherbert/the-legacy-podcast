@@ -19,6 +19,7 @@
 
 .episode-tease {
 	display: flex;
+	align-items: flex-start;
 	&:not(:last-child){
 		margin-bottom: $spacing;
 	}
