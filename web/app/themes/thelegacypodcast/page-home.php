@@ -24,12 +24,10 @@ $context['open_graph'] = array(
 	),
 );
 
-// Pull in current posts
-$context['posts'] = Timber::get_posts(
-	array(
-		'post_type' => 'post'
-	),
-	'Content\Post'
-);
+// Get podcast episodes
+$context['episodes'] = Timber::get_posts(array(
+	'post_type' => 'episode',
+	'posts_per_page' => 100
+));
 
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context, false, TimberLoader::CACHE_NONE );

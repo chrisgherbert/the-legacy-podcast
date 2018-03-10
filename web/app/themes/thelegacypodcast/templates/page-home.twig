@@ -2,47 +2,76 @@
 
 {% block content %}
 
-	<div class="container-fluid">
+	<div class="section">
 
-		<div class="row">
+		<div class="container-fluid">
 
-			<div class="col-md-12">
+			<div class="episode-teases">
 
-				<article class="the-content">
+				{% for episode in episodes %}
 
-					<h1>
-						{{ post.title }}
-					</h1>
+					<div class="episode-tease">
 
-					{{ post.content }}
+						<div class="episode-tease__left">
 
-				</article>
+							{% if episode.number %}
 
-				{% if posts %}
+								<a href="{{ episode.link }}">
 
-					<ol>
+									<img src="{{ episode.thumbnail.src('large')|resize(300, 225) }}" alt="{{ episode.thumbnail.alt|default('Thumbnail for ' ~ episode.title) }}" class="episode-tease__image">
 
-						{% for post in posts %}
+									<div class="episode-tease__number">
+										No. {{ episode.number }}
+									</div>
 
-							<li>
-								<a href="{{ post.link }}" title="{{ post.title }}">
-									<h3>{{ post.title }}</h3>
 								</a>
-								<p>
-									{{ post.get_preview(30) }}
-								</p>
-							</li>
 
-						{% endfor %}
+							{% endif %}
 
-					</ol>
+						</div>
 
-				{% endif %}
+						<div class="episode-tease__right">
 
-			</div><!-- /.col-md-12 -->
+							<div class="episode-tease__overline">
 
-		</div><!-- /.row -->
+								{{ episode.date }}
 
-	</div><!-- /.container-fluid -->
+								{% if episode.length %}
+									&nbsp; · &nbsp;{{ episode.length }}
+								{% endif %}
+
+								{% if episode.number %}
+									&nbsp; · &nbsp;Episode {{ episode.number }}
+								{% endif %}
+
+							</div>
+
+							<h3 class="episode-tease__title">
+								<a href="{{ episode.link }}">
+									{{ episode.title }}
+								</a>
+							</h3>
+
+							{% if episode.content %}
+
+								<div class="episode-tease__content">
+
+									{{ episode.get_preview(40, '', '') }}
+
+								</div>
+
+							{% endif %}
+
+						</div>
+
+					</div>
+
+				{% endfor %}
+
+			</div>
+
+		</div>
+
+	</div>
 
 {% endblock %}
