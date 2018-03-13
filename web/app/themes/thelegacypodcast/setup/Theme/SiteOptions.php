@@ -170,6 +170,56 @@ class SiteOptions {
 		$cmb->object_type('options-page');
 		$boxes[] = $cmb;
 
+		/////////////////
+		// Bio Content //
+		/////////////////
+
+		$box_key = 'bio';
+
+		$cmb = new_cmb2_box(array(
+			'id' => $box_key,
+			'title' => 'Bio Content',
+			'show_on' => $show_on
+		));
+
+		$cmb->add_field(array(
+			'id' => $box_key . '_title',
+			'name' => 'Bio Title (name)',
+			'type' => 'text',
+		));
+
+		$cmb->add_field(array(
+			'id' => $box_key . '_title',
+			'name' => 'Bio Title (name)',
+			'type' => 'text',
+		));
+
+		$cmb->add_field(array(
+			'id' => $box_key . '_content',
+			'name' => 'Bio Content',
+			'type' => 'wysiwyg',
+		));
+
+		$bio_links_id = $cmb->add_field(array(
+			'id' => $box_key . '_links',
+			'name' => 'Bio Links',
+			'type' => 'group'
+		));
+
+		$cmb->add_group_field($bio_links_id, array(
+			'id' => 'link_url',
+			'name' => 'Link URL',
+			'type' => 'text_url'
+		));
+
+		$cmb->add_group_field($bio_links_id, array(
+			'id' => 'link_title',
+			'name' => 'Link Title',
+			'type' => 'text'
+		));
+
+		$cmb->object_type('options-page');
+		$boxes[] = $cmb;
 
 		return $boxes;
 
