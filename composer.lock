@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1cd25c7686ac4dcc643fa20d38b205fc",
+    "content-hash": "d8b82a275c0bfd0b465e6d11dc29e186",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -145,32 +145,6 @@
             "time": "2017-08-22T23:25:33+00:00"
         },
         {
-            "name": "bermanco/cmb2-metatabs-options",
-            "version": "v2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bermanco/cmb2-metatabs-options.git",
-                "reference": "9edb1275a3273897fcd6e90991986f3854e98bd6"
-            },
-            "require": {
-                "webdevstudios/cmb2": "^2.1"
-            },
-            "type": "wordpress-muplugin",
-            "autoload": {
-                "psr-4": {
-                    "Cmb2_Metatabs_Options\\": "code/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Joey Nichols",
-                    "email": "nichols@bermanco.com"
-                }
-            ],
-            "description": "Contains a class to create a tabbed site options page for WordPress",
-            "time": "2016-06-22T18:00:33+00:00"
-        },
-        {
             "name": "bermanco/wordpress-image-download",
             "version": "v2.0.1",
             "source": {
@@ -227,16 +201,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
+                "reference": "049797d727261bf27f2690430d935067710049c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "url": "https://api.github.com/repos/composer/installers/zipball/049797d727261bf27f2690430d935067710049c2",
+                "reference": "049797d727261bf27f2690430d935067710049c2",
                 "shasum": ""
             },
             "require": {
@@ -248,7 +222,7 @@
             },
             "require-dev": {
                 "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
+                "phpunit/phpunit": "^4.8.36"
             },
             "type": "composer-plugin",
             "extra": {
@@ -319,15 +293,18 @@
                 "lavalite",
                 "lithium",
                 "magento",
+                "majima",
                 "mako",
                 "mediawiki",
                 "modulework",
+                "modx",
                 "moodle",
                 "osclass",
                 "phpbb",
                 "piwik",
                 "ppi",
                 "puppet",
+                "pxcms",
                 "reindex",
                 "roundcube",
                 "shopware",
@@ -340,7 +317,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-08-09T07:53:48+00:00"
+            "time": "2017-12-29T09:13:20+00:00"
         },
         {
             "name": "madcoda/php-youtube-api",
@@ -491,16 +468,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
+                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
-                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
                 "shasum": ""
             },
             "require": {
@@ -512,7 +489,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
@@ -546,7 +523,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-10-11T12:05:26+00:00"
+            "time": "2018-01-30T19:27:44+00:00"
         },
         {
             "name": "timber/timber",
@@ -613,16 +590,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.4",
+            "version": "v2.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
+                "reference": "7b604c89da162034bdf4bb66310f358d313dd16d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eddb97148ad779f27e670e1e3f19fb323aedafeb",
-                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7b604c89da162034bdf4bb66310f358d313dd16d",
+                "reference": "7b604c89da162034bdf4bb66310f358d313dd16d",
                 "shasum": ""
             },
             "require": {
@@ -631,8 +608,8 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.3@dev"
+                "symfony/debug": "^2.7",
+                "symfony/phpunit-bridge": "^3.3"
             },
             "type": "library",
             "extra": {
@@ -675,7 +652,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27T18:10:31+00:00"
+            "time": "2018-04-02T09:24:19+00:00"
         },
         {
             "name": "upstatement/routes",
@@ -780,16 +757,16 @@
         },
         {
             "name": "webdevstudios/cmb2",
-            "version": "v2.2.4",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CMB2/CMB2.git",
-                "reference": "badecc7f908781ac14b879c74526f9d055f4a41e"
+                "reference": "a1778c2ffccf2fdd11c9d2006eaa72192bdce9e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CMB2/CMB2/zipball/badecc7f908781ac14b879c74526f9d055f4a41e",
-                "reference": "badecc7f908781ac14b879c74526f9d055f4a41e",
+                "url": "https://api.github.com/repos/CMB2/CMB2/zipball/a1778c2ffccf2fdd11c9d2006eaa72192bdce9e9",
+                "reference": "a1778c2ffccf2fdd11c9d2006eaa72192bdce9e9",
                 "shasum": ""
             },
             "require": {
@@ -812,16 +789,28 @@
                     "email": "contact@webdevstudios.com",
                     "homepage": "https://github.com/WebDevStudios",
                     "role": "Developer"
+                },
+                {
+                    "name": "Justin Sternberg",
+                    "email": "justin@dsgnwrks.pro",
+                    "homepage": "https://dsgnwrks.pro",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Zao",
+                    "email": "office@zao.com",
+                    "homepage": "http://zao.is",
+                    "role": "Developer"
                 }
             ],
             "description": "CMB2 is a metabox, custom fields, and forms library for WordPress that will blow your mind.",
-            "homepage": "https://github.com/WebDevStudios/CMB2",
+            "homepage": "https://github.com/CMB2/CMB2",
             "keywords": [
                 "metabox",
                 "plugin",
                 "wordpress"
             ],
-            "time": "2017-02-27T15:05:31+00:00"
+            "time": "2017-12-20T14:18:52+00:00"
         },
         {
             "name": "webdevstudios/cpt-core",
