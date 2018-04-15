@@ -2,62 +2,64 @@
 
 {% block content %}
 
-	<article>
+	{% block single_header %}
 
-		<div class="container-fluid">
+		<div class="single-header">
 
-			{% block single_header %}
+			{% block single_overline %}{% endblock %}
 
-				<header>
+			{% block single_title %}
 
-					<h1>
-						{{ post.title }}
-					</h1>
-
-				</header>
+				<h1 class="single-title">
+					{{ post.title }}
+				</h1>
 
 			{% endblock %}
 
-			<div class="row">
+			{% block single_meta %}
 
-				<div class="col-sm-8">
+				<div class="single-meta">
 
-					{% block single_body %}
-
-						<div class="the-content">
-							{{ post.content}}
-						</div>
-
-					{% endblock %}
-
-					{% block single_footer %}
-
-						<footer>
-
-						</footer>
-
-					{% endblock %}
+					<div class="single-meta__item">
+						{{ post.date }}
+					</div>
 
 				</div>
 
-				<div class="col-sm-4">
-
-					{% block single_sidebar %}
-
-						<aside>
-
-							<h4>Related Posts</h4>
-
-						</aside>
-
-					{% endblock %}
-
-				</div>
-
-			</div>
+			{% endblock %}
 
 		</div>
 
-	</article>
+	{% endblock %}
+
+	{% block single_main %}
+
+		<div class="single-main">
+
+			{% block single_thumbnail %}
+
+				{% if post.thumbnail %}
+
+					<div class="single-thumbnail">
+
+						<img src="{{ post.thumbnail.src('large') }}" alt="{{ post.thumbnail.alt|default('Featured Image') }}" class="single-thumbnail__img">
+
+						{% if post.thumbnail.caption %}
+
+							<div class="single-thumbnail__caption">
+								{{ post.thumbnail.caption }}
+							</div>
+
+						{% endif %}
+
+					</div>
+
+				{% endif %}
+
+			{% endblock %}
+
+		</div>
+
+	{% endblock %}
 
 {% endblock %}
