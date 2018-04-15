@@ -13,6 +13,116 @@
 	margin: $spacing*2 0;
 }
 
+.section--tight {
+	margin: $spacing 0;
+}
+
+/**
+ * Share Buttons
+ */
+
+.share-button {
+	display: inline-block;
+	font-size: 16px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: lighten($gray-light, 30%);
+	color: $gray;
+	border-radius: 50%;
+	text-align: center;
+	&:hover, &:focus, &:active {
+		color: $gray;
+		text-decoration: none;
+		background-color: lighten($gray-light, 20%);
+	}
+}
+
+.share-button--facebook {
+	background-color: $facebook;
+	color: white;
+	&:hover, &:focus, &:active {
+		color: white;
+		background-color: darken($facebook, 10%);
+	}
+}
+
+.share-button--twitter {
+	background-color: $twitter;
+	color: white;
+	&:hover, &:focus, &:active {
+		color: white;
+		background-color: darken($twitter, 10%);
+	}
+}
+
+/**
+ * Single
+ */
+
+.single-header {
+	text-align: center;
+	margin-bottom: $spacing/2;
+}
+
+.single-title {
+	font-size: 40px;
+	text-transform: uppercase;
+	margin: 0 0 $spacing/4 0;
+	color: black;
+	a {
+		color: black;
+		&:hover, &:focus, &:active {
+			color: $brand-primary;
+			text-decoration: none;
+		}
+	}
+}
+
+.single-meta {
+	font-family: $font-family-sans-serif;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: $brand-primary;
+	letter-spacing: 2px;
+	font-weight: 600;
+	margin: 0 0 $spacing/3 0;
+}
+
+.single-meta__item {
+	display: inline-block;
+	&:not(:last-child){
+		&:after {
+			content: '·';
+			display: inline-block;
+			padding: 0 0.6em;
+		}
+	}
+}
+
+.single-thumbnail {
+	margin-bottom: $spacing/2;
+}
+
+.single-thumbnail__img {
+	box-shadow: 0 2px 4px rgba(black, 0.1);
+}
+
+.single-thumbnail__caption {
+	font-size: 10px;
+	letter-spacing: 0.5px;
+	color: rgba($text-color, 0.6);
+	font-family: $font-family-sans-serif;
+	font-weight: 600;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.single-share-buttons {
+	text-align: center;
+	margin: $spacing/2 0;
+}
+
 /**
  * Episode Teases
  */
@@ -54,27 +164,33 @@
 	flex-shrink: 1;
 }
 
-.episode-tease__overline {
-	font-family: $font-family-sans-serif;
+/**
+ * Single Episode
+ */
+
+.episode-number {
+	background-color: $brand-primary;
+	color: white;
+	font-family: $font-family-condensed;
+	font-size: 30px;
+	line-height: 30px;
 	text-transform: uppercase;
-	font-size: 13px;
-	color: $brand-primary;
-	letter-spacing: 2px;
-	font-weight: 600;
-	margin: 0 0 $spacing/3 0;
+	padding: 7px 12px;
+	display: inline-block;
 }
 
-.episode-tease__title {
-	font-size: 40px;
-	text-transform: uppercase;
-	margin: 0 0 $spacing/3 0;
-	&, a {
-		color: black;
-		&:hover, &:focus, &:active {
-			color: $brand-primary;
-			text-decoration: none;
-		}
-	}
+.episode-number--circle {
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+	padding: 0;
+	margin-bottom: $spacing/2;
+}
+
+.episode-player {
+	margin-bottom: $spacing/2;
 }
 
 /**

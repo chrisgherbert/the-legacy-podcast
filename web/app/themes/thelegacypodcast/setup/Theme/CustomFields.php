@@ -53,6 +53,12 @@ class CustomFields {
 		));
 
 		$cmb2->add_field(array(
+			'id' => 'player_embed',
+			'name' => 'Player Embed Code',
+			'type' => 'textarea_code'
+		));
+
+		$cmb2->add_field(array(
 			'id' => 'number',
 			'name' => 'Episode Number',
 			'type' => 'text_small'

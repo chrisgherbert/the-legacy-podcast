@@ -2,64 +2,138 @@
 
 {% block content %}
 
-	{% block single_header %}
+	<div class="section section--tight">
 
-		<div class="single-header">
+		{% block single_header %}
 
-			{% block single_overline %}{% endblock %}
+			<div class="single-header">
 
-			{% block single_title %}
+				<div class="container-fluid">
 
-				<h1 class="single-title">
-					{{ post.title }}
-				</h1>
+					<div class="row">
 
-			{% endblock %}
+						<div class="col-md-8 col-md-offset-2">
 
-			{% block single_meta %}
+							{% block single_overline %}{% endblock %}
 
-				<div class="single-meta">
+							{% block single_title %}
 
-					<div class="single-meta__item">
-						{{ post.date }}
+								<h1 class="single-title">
+									{{ post.title }}
+								</h1>
+
+							{% endblock %}
+
+							{% block single_meta %}
+
+								<div class="single-meta">
+
+									<div class="single-meta__item">
+										{{ post.date }}
+									</div>
+
+								</div>
+
+							{% endblock %}
+
+						</div>
+
 					</div>
 
 				</div>
 
-			{% endblock %}
+			</div>
 
-		</div>
+		{% endblock %}
 
-	{% endblock %}
+		{% block single_thumbnail %}
 
-	{% block single_main %}
+			{% if post.thumbnail %}
 
-		<div class="single-main">
+				<div class="single-thumbnail">
 
-			{% block single_thumbnail %}
+					<div class="container-fluid">
 
-				{% if post.thumbnail %}
+						<div class="row">
 
-					<div class="single-thumbnail">
+							<div class="col-md-10 col-md-offset-1">
 
-						<img src="{{ post.thumbnail.src('large') }}" alt="{{ post.thumbnail.alt|default('Featured Image') }}" class="single-thumbnail__img">
+								<img src="{{ post.thumbnail.src('large') }}" alt="{{ post.thumbnail.alt|default('Featured Image') }}" class="single-thumbnail__img">
 
-						{% if post.thumbnail.caption %}
+								{% if post.thumbnail.caption %}
 
-							<div class="single-thumbnail__caption">
-								{{ post.thumbnail.caption }}
+									<div class="single-thumbnail__caption">
+										{{ post.thumbnail.caption }}
+									</div>
+
+								{% endif %}
+
 							</div>
 
-						{% endif %}
+						</div>
 
 					</div>
 
-				{% endif %}
+				</div>
 
-			{% endblock %}
+			{% endif %}
 
-		</div>
+		{% endblock %}
 
-	{% endblock %}
+		{% block single_main %}
+
+			<div class="single-main">
+
+				<div class="container-fluid">
+
+					<div class="row">
+
+						<div class="col-md-8 col-md-offset-2">
+
+							{% block single_before_content %}{% endblock %}
+
+							{% if post.content %}
+
+								<div class="the-content">
+
+									{{ post.content }}
+
+								</div>
+
+							{% endif %}
+
+							{% block single_after_content %}{% endblock %}
+
+							{% block single_share_links %}
+
+								<div class="single-share-buttons">
+
+									<a href="{{ post.get_facebook_share_url }}" class="share-button share-button--facebook" OnClick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;">
+										<i class="fa fa-facebook"></i> <span class="sr-only">Share on Facebook</span>
+									</a>
+
+									<a href="{{ post.get_twitter_tweet_url }}" class="share-button share-button--twitter" OnClick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;">
+										<i class="fa fa-twitter"></i> <span class="sr-only">Share on Twitter</span>
+									</a>
+
+									<a href="{{ post.get_mailto_url }}" class="share-button share-button--email">
+										<i class="fa fa-envelope"></i> <span class="sr-only">Share via email</span>
+									</a>
+
+								</div>
+
+							{% endblock %}
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		{% endblock %}
+
+	</div>
 
 {% endblock %}

@@ -32,21 +32,27 @@
 
 						<div class="episode-tease__right">
 
-							<div class="episode-tease__overline">
+							<div class="single-meta episode-tease__overline">
 
-								{{ episode.date }}
+								<div class="single-meta__item">
+									{{ episode.date }}
+								</div>
 
 								{% if episode.length %}
-									&nbsp; · &nbsp;{{ episode.length }}
+									<div class="single-meta__item">
+										{{ episode.length }}
+									</div>
 								{% endif %}
 
 								{% if episode.number %}
-									&nbsp; · &nbsp;Episode {{ episode.number }}
+									<div class="single-meta__item">
+										Episode {{ episode.number }}
+									</div>
 								{% endif %}
 
 							</div>
 
-							<h3 class="episode-tease__title">
+							<h3 class="single-title episode-tease__title">
 								<a href="{{ episode.link }}">
 									{{ episode.title }}
 								</a>

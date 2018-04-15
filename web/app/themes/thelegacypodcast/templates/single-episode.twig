@@ -1,0 +1,35 @@
+{% extends 'single.twig' %}
+
+{% block single_overline %}
+
+	<div class="episode-number episode-number--circle">
+		No. {{ post.number }}
+	</div>
+
+{% endblock %}
+
+{% block single_meta %}
+
+	<div class="single-meta">
+
+		<div class="single-meta__item">
+			{{ post.date }}
+		</div>
+
+		<div class="single-meta__item">
+			{{ post.length }}
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block single_before_content %}
+
+	<div class="episode-player">
+
+		{{ post.player_embed|raw }}
+
+	</div>
+
+{% endblock %}
