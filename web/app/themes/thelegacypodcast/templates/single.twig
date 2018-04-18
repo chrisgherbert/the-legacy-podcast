@@ -80,6 +80,8 @@
 
 		{% endblock %}
 
+		{% block single_before_main %}{% endblock %}
+
 		{% block single_main %}
 
 			<div class="single-main">
@@ -94,7 +96,7 @@
 
 							{% if post.content %}
 
-								<div class="the-content">
+								<div class="single-post-content the-content">
 
 									{{ post.content }}
 
@@ -133,6 +135,8 @@
 			</div>
 
 		{% endblock %}
+
+		{% block single_after_main %}{% endblock %}
 
 	</div>
 

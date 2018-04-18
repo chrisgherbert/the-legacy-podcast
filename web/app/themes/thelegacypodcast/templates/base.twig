@@ -29,7 +29,7 @@
 		{% include 'components/mobile-menu.twig' %}
 
 		{% block header_container %}
-			{# {% include 'header/header.twig' %} #}
+			{% include 'header/header.twig' %}
 		{% endblock %}
 
 		<main id="main" role="main" class="main">
@@ -39,42 +39,6 @@
 			{% endblock %}
 
 		</main>
-
-		{% block bio_container %}
-
-			<div class="bio section section--dark">
-
-				<div class="container-fluid">
-
-					<h3 class="bio__title">
-						Michelle Harven
-					</h3>
-
-					<div class="bio__text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu elit lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-					</div>
-
-					<div class="links-list">
-
-						<a href="mailto:michelle.harven@gmail.com" class="link-list__link">
-							michelle.harven@gmail.com
-						</a>
-
-						<a href="http://twitter.com" class="link-list__link">
-							Twitter
-						</a>
-
-						<a href="http://facebook.com" class="link-list__link">
-							Facebook
-						</a>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		{% endblock %}
 
 		{% block footer_container %}
 

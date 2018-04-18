@@ -1,6 +1,46 @@
 {% extends "page.twig" %}
 
+{% block header_container %}{% endblock %}
+
 {% block content %}
+
+	<div class="section section--tight home-intro">
+
+		<div class="container-fluid">
+
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2">
+
+					{% if post.intro_image %}
+
+						<img src="{{ Image(post.intro_image_id).src('large')|resize(175,0) }}" alt="Podcast Artwork" class="home-intro__image">
+
+					{% endif %}
+
+					{% if post.intro_title %}
+
+						<h1 class="home-intro__title">
+							{{ post.intro_title }}
+						</h1>
+
+					{% endif %}
+
+					{% if post.content %}
+
+						<div class="home-intro__text the-content">
+							{{ post.content }}
+						</div>
+
+					{% endif %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
 
 	<div class="section">
 
@@ -18,7 +58,11 @@
 
 								<a href="{{ episode.link }}">
 
-									<img src="{{ episode.thumbnail.src('large')|resize(300, 225) }}" alt="{{ episode.thumbnail.alt|default('Thumbnail for ' ~ episode.title) }}" class="episode-tease__image">
+									{% if episode.thumbnail %}
+										<img src="{{ episode.thumbnail.src('large')|resize(300, 225) }}" alt="{{ episode.thumbnail.alt|default('Thumbnail for ' ~ episode.title) }}" class="episode-tease__image">
+									{% else %}
+
+									{% endif %}
 
 									<div class="episode-tease__number">
 										No. {{ episode.number }}
@@ -79,5 +123,57 @@
 		</div>
 
 	</div>
+
+	{% block bio_container %}
+
+		<div class="bio section section--tight section--dark">
+
+			<div class="container-fluid">
+
+				<div class="row">
+
+					<div class="col-sm-10 col-sm-offset-1">
+
+						<div class="bio__inner">
+
+							<div class="bio__body">
+
+								<div class="bio__overline">
+									Your devoted host,
+								</div>
+
+								<h3 class="bio__title">
+									Michelle Harven
+								</h3>
+
+								<div class="bio__text">
+									Michelle Harven is a journalist living in Washington, D.C., and an associate producer for the PBS NewsHour.
+								</div>
+
+								<div class="links-list">
+
+									<a href="http://www.michelleharven.com" class="link-list__link">
+										MichelleHarven.com
+									</a>
+
+									<a href="https://twitter.com/michelleharven" class="link-list__link">
+										Twitter
+									</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	{% endblock %}
 
 {% endblock %}

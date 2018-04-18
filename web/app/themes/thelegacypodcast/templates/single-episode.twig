@@ -1,5 +1,7 @@
 {% extends 'single.twig' %}
 
+{% block header_logo %}{% endblock %}
+
 {% block single_overline %}
 
 	<div class="episode-number episode-number--circle">
@@ -24,11 +26,51 @@
 
 {% endblock %}
 
-{% block single_before_content %}
+{% block single_before_main %}
 
-	<div class="episode-player">
+	<div class="container-fluid">
 
-		{{ post.player_embed|raw }}
+		<div class="row">
+
+			<div class="col-md-10 col-md-offset-1">
+
+				<div class="player-section">
+
+					<div class="episode-player">
+
+						{{ post.player_embed|raw }}
+
+					</div>
+
+					<div class="subscribe-links">
+
+						<a href="#" class="subscribe-link">
+							<i class="fa fa-rss"></i> RSS
+						</a>
+
+						<a href="#" class="subscribe-link">
+							<i class="fa fa-music"></i> iTunes
+						</a>
+
+						<a href="#" class="subscribe-link">
+							<i class="fa fa-google"></i> Google Play
+						</a>
+
+						<a href="#" class="subscribe-link">
+							<i class="fa fa-plus"></i> Overcast
+						</a>
+
+						<a href="#" class="subscribe-link">
+							<i class="fa fa-plus"></i> Pocketcasts
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
 
 	</div>
 

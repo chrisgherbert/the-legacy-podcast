@@ -17,6 +17,7 @@ class CustomFields {
 	 * @var array
 	 */
 	protected $boxes = array(
+		'home',
 		'episode'
 	);
 
@@ -42,6 +43,32 @@ class CustomFields {
 				add_action('cmb2_admin_init', array($this, $box));
 			}
 		}
+	}
+
+	public function home(){
+
+		$cmb2 = new_cmb2_box(array(
+			'id' => 'home',
+			'title' => 'Extended Info',
+			'object_types' => array('page'),
+			'show_on' => array('key' => 'show_on_front_page')
+		));
+
+		$cmb2->add_field(array(
+			'id' => 'intro_title',
+			'name' => 'Intro Section Title',
+			'type' => 'text'
+		));
+
+		$cmb2->add_field(array(
+			'id' => 'intro_image',
+			'name' => 'Intro Section Image (podcast artwork)',
+			'type' => 'file',
+			'options' => array(
+				'url' => false
+			)
+		));
+
 	}
 
 	public function episode(){
