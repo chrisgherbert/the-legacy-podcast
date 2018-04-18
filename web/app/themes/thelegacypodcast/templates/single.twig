@@ -94,15 +94,19 @@
 
 							{% block single_before_content %}{% endblock %}
 
-							{% if post.content %}
+							{% block single_post_content %}
 
-								<div class="single-post-content the-content">
+								{% if post.content %}
 
-									{{ post.content }}
+									<div class="single-post-content the-content">
 
-								</div>
+										{{ post.content }}
 
-							{% endif %}
+									</div>
+
+								{% endif %}
+
+							{% endblock %}
 
 							{% block single_after_content %}{% endblock %}
 
