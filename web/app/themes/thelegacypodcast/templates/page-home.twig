@@ -85,7 +85,7 @@
 									{% if episode.thumbnail %}
 										<img src="{{ episode.thumbnail.src('large')|resize(300, 225) }}" alt="{{ episode.thumbnail.alt|default('Thumbnail for ' ~ episode.title) }}" class="episode-tease__image">
 									{% else %}
-
+										<img src="{{ theme.link }}/assets/img/episode-thumb-placeholder.jpg" alt="Legacy Podcast Episode artwork" class="episode-tease__image">
 									{% endif %}
 
 									<div class="episode-tease__number">
